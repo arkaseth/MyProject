@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+     <meta name="generator" content="Jekyll v3.8.6">
+    <title>Title</title>
+    <link rel="stylesheet" type = "text/css" href="{% static 'polls/bootstrap-4.4.1-dist/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type = "text/css" href="{% static 'polls/style.css' %}"/>
+</head>
+<body>
+<hr>
+<p>Hey!</p>
+<hr>
+{% include 'polls/header.html' %}
+<div class="jumbotron">
+    <div class="container">
+        {% block main_content %}
+        {% endblock %}
+        {% include 'polls/footer.html' %}
+    </div>
+</div>
+</body>
+</html>
